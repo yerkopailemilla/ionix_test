@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="detail"
+            type="cl.yerkodee.ionix_test.model.user.DetailResponse" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/overlay_dark_50"
+        android:clickable="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/spacing_large">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="320dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/spacing_large"
+                android:layout_weight="1"
+                android:visibility="visible"
+                app:cardCornerRadius="@dimen/spacing_middle"
+                app:cardElevation="@dimen/spacing_middle">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_large">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:gravity="center_vertical"
+                            android:text="@string/dialog_rut_title"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/spacing_middle"
+                            android:gravity="center"
+                            android:text="@string/dialog_rut_message"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                            android:textColor="@color/grey_40" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="@dimen/spacing_middle"
+                            android:background="@color/colorPrimary" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/spacing_large">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/spacing_xmlarge"
+                                android:clipToPadding="false"
+                                app:cardBackgroundColor="@color/grey_5"
+                                app:cardCornerRadius="@dimen/spacing_medium"
+                                app:cardElevation="0dp"
+                                app:cardUseCompatPadding="false">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <EditText
+                                        android:id="@+id/et_search"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:inputType="textPostalAddress"
+                                        android:background="@android:color/transparent"
+                                        android:hint="@string/dialog_rut_input_hint"
+                                        android:imeOptions="actionSearch"
+                                        android:maxLines="1"
+                                        android:paddingStart="@dimen/spacing_medium"
+                                        android:singleLine="true"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead">
+
+                                        <requestFocus />
+
+                                    </EditText>
+
+                                    <ImageButton
+                                        android:id="@+id/btn_search"
+                                        android:layout_width="@dimen/spacing_xmlarge"
+                                        android:layout_height="@dimen/spacing_xmlarge"
+                                        android:background="@android:color/transparent"
+                                        android:padding="@dimen/spacing_middle"
+                                        android:tint="@color/grey_40"
+                                        app:srcCompat="@drawable/ic_search" />
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:visibleGone="@{detail != null}"
+                            android:padding="@dimen/spacing_large">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/spacing_middle"
+                                android:gravity="center_vertical"
+                                android:text="@string/dialog_rut_result_text"
+                                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/colorPrimary"
+                                android:textStyle="bold" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clipToPadding="false"
+                                app:cardBackgroundColor="@color/grey_5"
+                                app:cardCornerRadius="4dp"
+                                app:cardElevation="0dp"
+                                app:cardUseCompatPadding="false">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="@dimen/spacing_middle"
+                                    android:layout_marginStart="@dimen/spacing_middle"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_height="wrap_content"
+                                        android:layout_width="wrap_content"
+                                        android:text="@{detail.email}"
+                                        android:textColor="@color/colorPrimaryText"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                                        tools:text="email user"/>
+
+                                    <TextView
+                                        android:layout_height="wrap_content"
+                                        android:layout_width="wrap_content"
+                                        android:text="@{detail.phoneNumber}"
+                                        android:textColor="@color/colorPrimaryText"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                                        tools:text="phone number user"/>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_large"
+                app:backgroundTint="@color/overlay_light_30"
+                app:elevation="0dp"
+                app:fabSize="normal"
+                app:srcCompat="@drawable/ic_close">
+
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

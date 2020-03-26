@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="category"
+            type="cl.yerkodee.ionix_test.model.category.Category" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_medium"
+        app:cardBackgroundColor="@color/overlay_light_40"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:id="@+id/lyt_item_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_middle">
+
+            <TextView
+                android:id="@+id/item_list_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:setIcon="@{category.icon}"
+                android:textColor="@color/colorSecondaryText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:gravity="center"
+                android:text="@{category.title}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/colorSecondaryText"
+                tools:text="category name" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

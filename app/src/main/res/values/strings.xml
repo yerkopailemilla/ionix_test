@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Prueba IONIX Android Dev</string>
+
+    <string name="main_activity_welcome">Bienvenido</string>
+    <string name="main_activity_username">Yerko Pailemilla Parada</string>
+    <string name="main_activity_version">v2.5.4</string>
+
+    <string name="dialog_rut_title">Pago facíl</string>
+    <string name="dialog_rut_message">Ingresa tu RUT en el siguiente campo:</string>
+    <string name="dialog_rut_input_hint">ej: 1–9</string>
+    <string name="dialog_contact_msg">\'\'Me lo contaron y lo olvidé; lo ví y lo entendí; lo hice y lo aprendí.\'\'\n\n- Confucio</string>
+    <string name="dialog_contact_email">yerkopailemilla@gmail.com</string>
+    <string name="dialog_contact_phone">+56 9 3691 9092</string>
+    <string name="dialog_contact_engineer">Ingeniero en Informática</string>
+    <string name="dialog_contact_dev">Android Developer</string>
+    <string name="dialog_rut_result_text">Resultado:</string>
+
+    <string name="fa_dollar_sign"></string>
+    <string name="fa_gas_pump"></string>
+    <string name="fa_map_marked_alt"></string>
+    <string name="fa_star"></string>
+    <string name="fa_envelope"></string>
+    <string name="fa_cog"></string>
+
+</resources>
