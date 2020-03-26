@@ -25,7 +25,7 @@ import cl.yerkodee.ionix_test.repository.utils.NetworkBoundResource;
 import cl.yerkodee.ionix_test.repository.utils.Resource;
 
 @Singleton
-public class DetailRepository {
+public class DetailRepository  {
 
     private static final String KEY_IONIX = "ionix123456";
     private static final String ENCRYPTION_METHOD_DES = "DES";
