@@ -11,7 +11,7 @@ Repository corresponding to the Ionix Tech Test.
 
 ## Preview
 
-![](demo_shell_app.gif)
+![](demo.gif)
 
 ## Stack
 
